@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(ProjectDir)data&quot; &quot;$(TargetDir)data&quot; /e /y /i /r&#xD;&#xA;" />
+  </Target>
+
 </Project>
