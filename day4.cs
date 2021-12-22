@@ -19,11 +19,8 @@ namespace adventofcode
             var WinningBoard = 0;
             for (int i = 0; i < LottoData.LottoNumbers.Count; i++)
             {
-                Console.WriteLine($"Draw: {LottoData.LottoNumbers[i]} at index: {i}");
-
                 for (int b = 0; b < LottoData.LottoBoards.Count; b++)
                 {
-                    Console.WriteLine($"Checking Board: {b.ToString()}");
                     for (int r = 0; r < 5; r++)
                     {
                         BingoColumns = 0;
@@ -93,14 +90,10 @@ namespace adventofcode
             var WinningBoard = 0;
             for (int i = 0; i < LottoData.LottoNumbers.Count; i++)
             {
-                Console.WriteLine($"Draw: {LottoData.LottoNumbers[i]} at index: {i}");
-
                 for (int b = 0; b < LottoData.LottoBoards.Count; b++)
                 {
-                    
                     if (LottoData.LottoBoards[b].BoardNumbers.Win is false)
                     {
-                        Console.WriteLine($"Checking Board: {b.ToString()}");
                         for (int r = 0; r < 5; r++)
                         {
                             BingoColumns = 0;
@@ -123,7 +116,6 @@ namespace adventofcode
 
                                 if (BingoRows == 5 || BingoColumns == 5)
                                 {
-                                    Console.WriteLine($"Winning board! {b}");
                                     PickedNumber = LottoData.LottoNumbers[i];
                                     LottoData.LottoBoards[b].BoardNumbers.Win = true;
                                     WinningBoard = b;
@@ -133,10 +125,6 @@ namespace adventofcode
                             if (BingoRows == 5 || BingoColumns == 5)
                                 break;
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Board: {b.ToString()} is already a winner!");
                     }
                     
                 }
@@ -154,7 +142,6 @@ namespace adventofcode
 
                     if (LottoData.LottoBoards[WinningBoard].BoardNumbers.Bingo[r, d] == BingoValues.No)
                         UnmarkedNumbers.Add(LottoData.LottoBoards[WinningBoard].BoardNumbers.Numbers[r, d]);
-
 
                 }
             }
@@ -187,8 +174,8 @@ namespace adventofcode
         }
         public static Data InitData()
         {
-            var ProjectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            var FilePath = Path.Combine(ProjectFolder, @"..\data\day4.txt");
+            var ProjectFolder = Directory.GetCurrentDirectory();
+            var FilePath = Path.Combine(ProjectFolder, @"data\day4.txt");
             var Columns = File.ReadAllLines(FilePath);
             var data = new Data()
             {

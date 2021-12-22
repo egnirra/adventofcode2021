@@ -10,8 +10,8 @@ namespace adventofcode
     {
         public static void Solution2()
         {
-            var projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            var file = Path.Combine(projectFolder, @"..\data\day1.txt");
+            var ProjectFolder = Directory.GetCurrentDirectory();
+            var file = Path.Combine(ProjectFolder, @"data\day1.txt");
             var data = File.ReadAllLines(file);
             var input = new int[data.Length];
             for (int i = 0; i < data.Length; i++)

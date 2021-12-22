@@ -10,8 +10,8 @@ namespace adventofcode
     {
         public static void Solution1()
         {
-            var projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            var file = Path.Combine(projectFolder, @"..\data\day3.txt");
+            var ProjectFolder = Directory.GetCurrentDirectory();
+            var file = Path.Combine(ProjectFolder, @"data\day3.txt");
             var columns = File.ReadAllLines(file);
 
             var GammaRate = new List<int>();
@@ -54,8 +54,8 @@ namespace adventofcode
 
         public static void Solution2()
         {
-            var projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            var file = Path.Combine(projectFolder, @"..\data\day3.txt");
+            var projectFolder = Directory.GetCurrentDirectory();
+            var file = Path.Combine(projectFolder, @"data\day3.txt");
             var columns = File.ReadAllLines(file).ToList();
             var columns2 = File.ReadAllLines(file).ToList();
 

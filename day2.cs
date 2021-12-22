@@ -13,8 +13,8 @@ namespace adventofcode
 
         public static void Solution1()
         {
-            var projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            var file = Path.Combine(projectFolder, @"..\data\day2.txt");
+            var ProjectFolder = Directory.GetCurrentDirectory();
+            var file = Path.Combine(ProjectFolder, @"data\day2.txt");
             foreach (var i in File.ReadAllLines(file))
             {
                 var test = i switch
@@ -37,8 +37,8 @@ namespace adventofcode
             horizontal = 0;
             depth = 0;
             aim = 0;
-            var projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            var file = Path.Combine(projectFolder, @"..\data\day2.txt");
+            var projectFolder = Directory.GetCurrentDirectory();
+            var file = Path.Combine(projectFolder, @"data\day2.txt");
             foreach (var i in File.ReadAllLines(file))
             {
                 var value = int.Parse(i[^1..]);
