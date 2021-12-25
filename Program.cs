@@ -21,3 +21,9 @@ adventofcode.day4.Solution1();
 
 Console.WriteLine("\nDay4 Solution 2");
 adventofcode.day4.Solution2();
+
+Console.WriteLine("\nDay5 Solution 1");
+adventofcode.day5.Solution1();
+
+Console.WriteLine("\nDay5 Solution 2");
+adventofcode.day5.Solution2();

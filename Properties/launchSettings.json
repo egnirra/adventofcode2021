@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "adventofcode": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
