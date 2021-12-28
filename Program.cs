@@ -33,3 +33,9 @@ adventofcode.day6.Solution1(80);
 
 Console.WriteLine("\nDay6 Solution 2 256 days");
 adventofcode.day6.Solution1(256);
+
+Console.WriteLine("\nDay7 Solution 1");
+adventofcode.day7.Solution1();
+
+Console.WriteLine("\nDay7 Solution 2");
+adventofcode.day7.Solution2();
